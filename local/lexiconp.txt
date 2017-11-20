@@ -1,0 +1,814 @@
+<UNK> 1.0 <UNK>
+가	1.0	k0 aa
+걸	1.0	k0 vv ll
+것	1.0	k0 vv tf
+게	1.0	k0 ee
+곧	1.0	k0 oo tf
+굴	1.0	k0 uu ll
+까	1.0	kk aa
+꽤	1.0	kk wq
+꿩	1.0	kk wv ng
+나	1.0	nn aa
+난	1.0	nn aa nf
+날	1.0	nn aa ll
+너	1.0	nn vv
+늘	1.0	nn xx ll
+다	1.0	t0 aa
+더	1.0	t0 vv
+돼	1.0	t0 wq
+두	1.0	t0 uu
+둑	1.0	t0 uu kf
+듯	1.0	t0 xx tf
+등	1.0	t0 xx ng
+때	1.0	tt qq
+리	1.0	rr ii
+막	1.0	mm aa kf
+먼	1.0	mm vv nf
+몇	1.0	mm yv tf
+물	1.0	mm uu ll
+번	1.0	p0 vv nf
+벌	1.0	p0 vv ll
+본	1.0	p0 oo nf
+봄	1.0	p0 oo mf
+뿐	1.0	pp uu nf
+산	1.0	s0 aa nf
+삼	1.0	s0 aa mf
+서	1.0	s0 vv
+소	1.0	s0 oo
+속	1.0	s0 oo kf
+수	1.0	s0 uu
+십	1.0	s0 ii pf
+알	1.0	aa ll
+앞	1.0	aa pf
+양	1.0	ya ng
+얘	1.0	yq
+영	1.0	yv ng
+온	1.0	oo nf
+윤	1.0	yu nf
+이	1.0	ii
+일	1.0	ii ll
+잘	1.0	c0 aa ll
+저	1.0	c0 vv
+제	1.0	c0 ee
+좀	1.0	c0 oo mf
+진	1.0	c0 ii nf
+쪽	1.0	cc oo kf
+참	1.0	ch aa mf
+체	1.0	ch ee
+큰	1.0	kh xx nf
+타	1.0	th aa
+탄	1.0	th aa nf
+한	1.0	h0 aa nf
+홱	1.0	h0 wq kf
+가는	1.0	k0 aa nn xx nf
+가릴	1.0	k0 aa rr ii ll
+가슴	1.0	k0 aa s0 xx mf
+가시	1.0	k0 aa s0 ii
+가야	1.0	k0 aa ya
+가에	1.0	k0 aa ee
+가을	1.0	k0 aa xx ll
+갈라	1.0	k0 aa ll rr aa
+갈밭	1.0	k0 aa ll pp aa tf
+감고	1.0	k0 aa mf k0 oo
+감는	1.0	k0 aa mf nn xx nf
+감이	1.0	k0 aa mm ii
+갓난	1.0	k0 aa nf nn aa nf
+개나	1.0	k0 qq nn aa
+개울	1.0	k0 qq uu ll
+걷어	1.0	k0 vv t0 vv
+걷혀	1.0	k0 vv ch yv
+검게	1.0	k0 vv mf k0 ee
+검은	1.0	k0 vv mm xx nf
+것만	1.0	k0 vv nf mm aa nf
+것을	1.0	k0 vv s0 xx ll
+고기	1.0	k0 oo k0 ii
+고운	1.0	k0 oo uu nf
+고장	1.0	k0 oo c0 aa ng
+곱게	1.0	k0 oo pf kk ee
+곱다	1.0	k0 oo pf tt aa
+귀를	1.0	k0 wi rr xx ll
+그냥	1.0	k0 xx nn ya ng
+그리	1.0	k0 xx rr ii
+기어	1.0	k0 ii vv
+길에	1.0	k0 ii rr ee
+길을	1.0	k0 ii rr xx ll
+까닭	1.0	kk aa t0 aa kf
+깔고	1.0	kk aa ll k0 oo
+깜짝	1.0	kk aa mf cc aa kf
+끝을	1.0	kk xx th xx ll
+나가	1.0	nn aa k0 aa
+나면	1.0	nn aa mm yv nf
+나무	1.0	nn aa mm uu
+날은	1.0	nn aa rr xx nf
+날이	1.0	nn aa rr ii
+내가	1.0	nn qq k0 aa
+낸다	1.0	nn qq nf t0 aa
+너머	1.0	nn vv mm vv
+녹기	1.0	nn oo kf kk ii
+논과	1.0	nn oo nf k0 wa
+놀라	1.0	nn oo ll rr aa
+놀려	1.0	nn oo ll rr yv
+놓고	1.0	nn oo kh oo
+놓는	1.0	nn oo nf nn xx nf
+놓아	1.0	nn oo aa
+눈과	1.0	nn uu nf k0 wa
+눈을	1.0	nn uu nn xx ll
+눈이	1.0	nn uu nn ii
+늙은	1.0	nn xx ll k0 xx nf
+늦게	1.0	nn xx tf kk ee
+다음	1.0	t0 aa xx mf
+달고	1.0	t0 aa ll k0 oo
+달리	1.0	t0 aa ll rr ii
+대신	1.0	t0 qq s0 ii nf
+던진	1.0	t0 vv nf c0 ii nf
+데가	1.0	t0 ee k0 aa
+돌래	1.0	t0 oo ll rr qq
+동안	1.0	t0 oo ng aa nf
+두면	1.0	t0 uu mm yv nf
+둑에	1.0	t0 uu k0 ee
+둘려	1.0	t0 uu ll rr yv
+들도	1.0	t0 xx ll t0 oo
+들로	1.0	t0 xx ll rr oo
+듯이	1.0	t0 xx s0 ii
+뛰어	1.0	tt wi vv
+뛰쳐	1.0	tt wi ch yv
+뜯는	1.0	tt xx nf nn xx nf
+뜯어	1.0	tt xx t0 vv
+마냥	1.0	mm aa nn ya ng
+마른	1.0	mm aa rr xx nf
+마리	1.0	mm aa rr ii
+마을	1.0	mm aa xx ll
+마치	1.0	mm aa ch ii
+말도	1.0	mm aa ll t0 oo
+맑고	1.0	mm aa ll kk oo
+맑은	1.0	mm aa ll k0 xx nf
+매운	1.0	mm qq uu nf
+먹고	1.0	mm vv kf kk oo
+먼저	1.0	mm vv nf c0 vv
+메에	1.0	mm ee ee
+멱만	1.0	mm yv ng mm aa nf
+멱을	1.0	mm yv k0 xx ll
+목이	1.0	mm oo k0 ii
+몰려	1.0	mm oo ll rr yv
+몸을	1.0	mm oo mm xx ll
+몹시	1.0	mm oo pf ss ii
+무슨	1.0	mm uu s0 xx nf
+무우	1.0	mm uu uu
+문득	1.0	mm uu nf t0 xx kf
+물만	1.0	mm uu ll mm aa nf
+물을	1.0	mm uu rr xx ll
+밑에	1.0	mm ii th ee
+바람	1.0	p0 aa rr aa mf
+바보	1.0	p0 aa p0 oo
+발이	1.0	p0 aa rr ii
+배를	1.0	p0 qq rr xx ll
+번져	1.0	p0 vv nf c0 yv
+벌떡	1.0	p0 vv ll tt vv kf
+벌써	1.0	p0 vv ll ss vv
+벗어	1.0	p0 vv s0 vv
+볕을	1.0	p0 yv th xx ll
+보는	1.0	p0 oo nn xx nf
+보면	1.0	p0 oo mm yv nf
+보자	1.0	p0 oo c0 aa
+보지	1.0	p0 oo c0 ii
+봐도	1.0	p0 wa t0 oo
+뵈지	1.0	p0 wo c0 ii
+부채	1.0	p0 uu ch qq
+분홍	1.0	p0 uu nf h0 oo ng
+불어	1.0	p0 uu rr vv
+불을	1.0	p0 uu rr xx ll
+불탄	1.0	p0 uu ll th aa nf
+비켜	1.0	p0 ii kh yv
+비킬	1.0	p0 ii kh ii ll
+빤히	1.0	pp aa nf h0 ii
+뻗고	1.0	pp vv tf kk oo
+뿔에	1.0	pp uu rr ee
+산간	1.0	s0 aa nf k0 aa nf
+산과	1.0	s0 aa nf k0 wa
+산도	1.0	s0 aa nf t0 oo
+산을	1.0	s0 aa nn xx ll
+살고	1.0	s0 aa ll k0 oo
+살기	1.0	s0 aa ll k0 ii
+살진	1.0	s0 aa ll c0 ii nf
+새끼	1.0	s0 qq kk ii
+새로	1.0	s0 qq rr oo
+섰다	1.0	s0 vv tf tt aa
+성터	1.0	s0 vv ng th vv
+소가	1.0	s0 oo k0 aa
+소녀	1.0	s0 oo nn yv
+소는	1.0	s0 oo nn xx nf
+소를	1.0	s0 oo rr xx ll
+속에	1.0	s0 oo k0 ee
+속을	1.0	s0 oo k0 xx ll
+속의	1.0	s0 oo k0 xi
+속이	1.0	s0 oo k0 ii
+손을	1.0	s0 oo nn xx ll
+실컷	1.0	s0 ii ll kh vv tf
+싸여	1.0	ss aa yv
+쑥을	1.0	ss uu k0 xx ll
+쑥이	1.0	ss uu k0 ii
+아닌	1.0	aa nn ii nf
+아래	1.0	aa rr qq
+아주	1.0	aa c0 uu
+안고	1.0	aa nf kk oo
+앉아	1.0	aa nf c0 aa
+않게	1.0	aa nf kh ee
+않는	1.0	aa nf nn xx nf
+않던	1.0	aa nf th vv nf
+않은	1.0	aa nn xx nf
+어떤	1.0	vv tt vv nf
+얼른	1.0	vv ll rr xx nf
+얼마	1.0	vv ll mm aa
+없는	1.0	vv mf nn xx nf
+없다	1.0	vv pf tt aa
+없을	1.0	vv pf ss xx ll
+없이	1.0	vv pf ss ii
+여태	1.0	yv th qq
+오래	1.0	oo rr qq
+오랜	1.0	oo rr qq nf
+오면	1.0	oo mm yv nf
+온통	1.0	oo nf th oo ng
+올라	1.0	oo ll rr aa
+왔다	1.0	wa tf tt aa
+요행	1.0	yo h0 qq ng
+울면	1.0	uu ll mm yv nf
+움켜	1.0	uu mf kh yv
+움큼	1.0	uu mf kh xx mf
+위로	1.0	wi rr oo
+유독	1.0	yu t0 oo kf
+으레	1.0	xx rr ee
+이게	1.0	ii k0 ee
+이런	1.0	ii rr vv nf
+이럴	1.0	ii rr vv ll
+이른	1.0	ii rr xx nf
+이제	1.0	ii c0 ee
+익고	1.0	ii kf kk oo
+익는	1.0	ii ng nn xx nf
+일도	1.0	ii ll t0 oo
+일을	1.0	ii rr xx ll
+입은	1.0	ii p0 xx nf
+있고	1.0	ii tf kk oo
+있는	1.0	ii nf nn xx nf
+있니	1.0	ii nf nn ii
+있다	1.0	ii tf tt aa
+있어	1.0	ii ss vv
+있지	1.0	ii tf cc ii
+자고	1.0	c0 aa k0 oo
+자꾸	1.0	c0 aa kk uu
+잔디	1.0	c0 aa nf t0 ii
+잡힐	1.0	c0 aa ph ii ll
+저도	1.0	c0 vv t0 oo
+저쯤	1.0	c0 vv cc xx mf
+전에	1.0	c0 vv nn ee
+좀더	1.0	c0 oo mf t0 vv
+주지	1.0	c0 uu c0 ii
+지고	1.0	c0 ii k0 oo
+지친	1.0	c0 ii ch ii nf
+질러	1.0	c0 ii ll rr vv
+집어	1.0	c0 ii p0 vv
+짙고	1.0	c0 ii tf kk oo
+쫓고	1.0	cc oo tf kk oo
+쬐던	1.0	cc wo t0 vv nf
+찾아	1.0	ch aa c0 aa
+채로	1.0	ch qq rr oo
+코를	1.0	kh oo rr xx ll
+큰길	1.0	kh xx nf k0 ii ll
+털이	1.0	th vv rr ii
+팔과	1.0	ph aa ll k0 wa
+패를	1.0	ph qq rr xx ll
+풀을	1.0	ph uu rr xx ll
+피고	1.0	ph ii k0 oo
+피면	1.0	ph ii mm yv nf
+피어	1.0	ph ii vv
+하고	1.0	h0 aa k0 oo
+하나	1.0	h0 aa nn aa
+하는	1.0	h0 aa nn xx nf
+하던	1.0	h0 aa t0 vv nf
+하면	1.0	h0 aa mm yv nf
+하얀	1.0	h0 aa ya nf
+한다	1.0	h0 aa nf t0 aa
+한참	1.0	h0 aa nf ch aa mf
+핥아	1.0	h0 aa ll th aa
+함께	1.0	h0 aa mf kk ee
+해가	1.0	h0 qq k0 aa
+햇살	1.0	h0 qq tf ss aa ll
+했다	1.0	h0 qq tf tt aa
+했을	1.0	h0 qq ss xx ll
+향해	1.0	h0 ya ng h0 qq
+훔쳐	1.0	h0 uu mf ch yv
+가까운	1.0	k0 aa kk aa uu nf
+가듯이	1.0	k0 aa t0 xx s0 ii
+갈꽃뿐	1.0	k0 aa ll kk oo tf pp uu nf
+갈꽃을	1.0	k0 aa ll kk oo ch xx ll
+갈꽃이	1.0	k0 aa ll kk oo ch ii
+갈밭도	1.0	k0 aa ll pp aa tf tt oo
+갑자기	1.0	k0 aa pf cc aa k0 ii
+강에서	1.0	k0 aa ng ee s0 vv
+같았다	1.0	k0 aa th aa tf tt aa
+같지는	1.0	k0 aa tf cc ii nn xx nf
+개울을	1.0	k0 qq uu rr xx ll
+건너기	1.0	k0 vv nf nn vv k0 ii
+건너는	1.0	k0 vv nf nn vv nn xx nf
+건너던	1.0	k0 vv nf nn vv t0 vv nf
+건너편	1.0	k0 vv nf nn vv ph yv nf
+건넌다	1.0	k0 vv nf nn vv nf t0 aa
+것이다	1.0	k0 vv s0 ii t0 aa
+겨우내	1.0	k0 yv uu nn qq
+고삐를	1.0	k0 oo pp ii rr xx ll
+고양이	1.0	k0 oo ya ng ii
+고장의	1.0	k0 oo c0 aa ng xi
+고함을	1.0	k0 oo h0 aa mm xx ll
+군침도	1.0	k0 uu nf ch ii mf t0 oo
+귀여운	1.0	k0 wi yv uu nf
+귀엽지	1.0	k0 wi yv pf cc ii
+그늘이	1.0	k0 xx nn xx rr ii
+그대로	1.0	k0 xx t0 qq rr oo
+그래도	1.0	k0 xx rr qq t0 oo
+그러나	1.0	k0 xx rr vv nn aa
+그러한	1.0	k0 xx rr vv h0 aa nf
+그런데	1.0	k0 xx rr vv nf t0 ee
+그리고	1.0	k0 xx rr ii k0 oo
+기울면	1.0	k0 ii uu ll mm yv nf
+기울여	1.0	k0 ii uu ll rr yv
+기차도	1.0	k0 ii ch aa t0 oo
+길에는	1.0	k0 ii rr ee nn xx nf
+깊숙히	1.0	k0 ii pf ss uu kh ii
+꺼멓게	1.0	kk vv mm vv kh ee
+끝나면	1.0	kk xx nf nn aa mm yv nf
+나더니	1.0	nn aa t0 vv nn ii
+나도록	1.0	nn aa t0 oo rr oo kf
+나무를	1.0	nn aa mm uu rr xx ll
+나무와	1.0	nn aa mm uu wa
+나오면	1.0	nn aa oo mm yv nf
+나오지	1.0	nn aa oo c0 ii
+나왔다	1.0	nn aa wa tf tt aa
+날부터	1.0	nn aa ll pp uu th vv
+날쌔게	1.0	nn aa ll ss qq k0 ee
+내면서	1.0	nn qq mm yv nf s0 vv
+너머에	1.0	nn vv mm vv ee
+넣었다	1.0	nn vv vv tf tt aa
+누렇게	1.0	nn uu rr vv kh ee
+눈알이	1.0	nn uu nn aa rr ii
+다치기	1.0	t0 aa ch ii k0 ii
+단풍과	1.0	t0 aa nf ph uu ng k0 wa
+달렸다	1.0	t0 aa ll rr yv tf tt aa
+달리기	1.0	t0 aa ll rr ii k0 ii
+달린다	1.0	t0 aa ll rr ii nf t0 aa
+돋았고	1.0	t0 oo t0 aa tf kk oo
+돌아갈	1.0	t0 oo rr aa k0 aa ll
+동서로	1.0	t0 oo ng s0 vv rr oo
+둥글고	1.0	t0 uu ng k0 xx ll k0 oo
+뒤에는	1.0	t0 wi ee nn xx nf
+뒤지고	1.0	t0 wi c0 ii k0 oo
+들길을	1.0	t0 xx ll k0 ii rr xx ll
+들어가	1.0	t0 xx rr vv k0 aa
+들었다	1.0	t0 xx rr vv tf tt aa
+따르고	1.0	tt aa rr xx k0 oo
+때로는	1.0	tt qq rr oo nn xx nf
+때문에	1.0	tt qq mm uu nn ee
+때에는	1.0	tt qq ee nn xx nf
+마을도	1.0	mm aa xx ll t0 oo
+마을로	1.0	mm aa xx ll rr oo
+마을에	1.0	mm aa xx rr ee
+마장쯤	1.0	mm aa c0 aa ng cc xx mf
+막혀서	1.0	mm aa kh yv s0 vv
+만만한	1.0	mm aa nf mm aa nf h0 aa nf
+말았다	1.0	mm aa rr aa tf tt aa
+먹었다	1.0	mm vv k0 vv tf tt aa
+메밀꽃	1.0	mm ee mm ii ll kk oo tf
+며칠째	1.0	mm yv ch ii ll cc qq
+멱감는	1.0	mm yv kf kk aa mf nn xx nf
+모르게	1.0	mm oo rr xx k0 ee
+모르는	1.0	mm oo rr xx nn xx nf
+몰랐다	1.0	mm oo ll rr aa tf tt aa
+못들은	1.0	mm oo tf tt xx rr xx nf
+무료에	1.0	mm uu rr yo ee
+무엇을	1.0	mm uu vv s0 xx ll
+물기가	1.0	mm uu ll k0 ii k0 aa
+미간이	1.0	mm ii k0 aa nn ii
+밑이나	1.0	mm ii ch ii nn aa
+받기도	1.0	p0 aa tf kk ii t0 oo
+발쯤만	1.0	p0 aa ll cc xx mf mm aa nf
+밤꽃이	1.0	p0 aa mf kk oo ch ii
+버렸다	1.0	p0 vv rr yv tf tt aa
+버릇이	1.0	p0 vv rr xx s0 ii
+번번이	1.0	p0 vv nf p0 vv nn ii
+번이고	1.0	p0 vv nn ii k0 oo
+벌였다	1.0	p0 vv ll rr yv tf tt aa
+보기도	1.0	p0 oo k0 ii t0 oo
+보리가	1.0	p0 oo rr ii k0 aa
+보리를	1.0	p0 oo rr ii rr xx ll
+보았다	1.0	p0 oo aa tf tt aa
+보이지	1.0	p0 oo ii c0 ii
+봄이면	1.0	p0 oo mm ii mm yv nf
+불꽃은	1.0	p0 uu ll kk oo ch xx nf
+불었다	1.0	p0 uu rr vv tf tt aa
+불평도	1.0	p0 uu ll ph yv ng t0 oo
+붙이고	1.0	p0 uu ch ii k0 oo
+비비대	1.0	p0 ii p0 ii t0 qq
+비추어	1.0	p0 ii ch uu vv
+빛나는	1.0	p0 ii nf nn aa nn xx nf
+빠졌다	1.0	pp aa c0 yv tf tt aa
+빨래가	1.0	pp aa ll rr qq k0 aa
+뻐꾸기	1.0	pp vv kk uu k0 ii
+뽀얗게	1.0	pp oo ya kh ee
+삘기를	1.0	pp ii ll k0 ii rr xx ll
+사람이	1.0	s0 aa rr aa mm ii
+사지를	1.0	s0 aa c0 ii rr xx ll
+삭정이	1.0	s0 aa kf cc vv ng ii
+산발치	1.0	s0 aa nf p0 aa ll ch ii
+산에는	1.0	s0 aa nn ee nn xx nf
+삼켰다	1.0	s0 aa mf kh yv tf tt aa
+상당한	1.0	s0 aa ng t0 aa ng h0 aa nf
+새끼를	1.0	s0 qq kk ii rr xx ll
+생겼다	1.0	s0 qq ng k0 yv tf tt aa
+세수를	1.0	s0 ee s0 uu rr xx ll
+소녀가	1.0	s0 oo nn yv k0 aa
+소녀는	1.0	s0 oo nn yv nn xx nf
+소녀를	1.0	s0 oo nn yv rr xx ll
+소녀의	1.0	s0 oo nn yv xi
+소년은	1.0	s0 oo nn yv nn xx nf
+소년의	1.0	s0 oo nn yv nn xi
+소년이	1.0	s0 oo nn yv nn ii
+소들은	1.0	s0 oo t0 xx rr xx nf
+소리가	1.0	s0 oo rr ii k0 aa
+소매를	1.0	s0 oo mm qq rr xx ll
+속에는	1.0	s0 oo k0 ee nn xx nf
+속에서	1.0	s0 oo k0 ee s0 vv
+손으로	1.0	s0 oo nn xx rr oo
+순순히	1.0	s0 uu nf s0 uu nf h0 ii
+순해서	1.0	s0 uu nf h0 qq s0 vv
+숨결이	1.0	s0 uu mf k0 yv rr ii
+숨어서	1.0	s0 uu mm vv s0 vv
+쉽사리	1.0	s0 wi pf ss aa rr ii
+스웨터	1.0	s0 xx we th vv
+시간이	1.0	s0 ii k0 aa nn ii
+시원한	1.0	s0 ii wv nf h0 aa nf
+실수를	1.0	s0 ii ll s0 uu rr xx ll
+싫었다	1.0	s0 ii rr vv tf tt aa
+싫증이	1.0	s0 ii ll cc xx ng ii
+씨름도	1.0	ss ii rr xx mf t0 oo
+씹기도	1.0	ss ii pf kk ii t0 oo
+아는지	1.0	aa nn xx nf c0 ii
+아니고	1.0	aa nn ii k0 oo
+아니라	1.0	aa nn ii rr aa
+아니면	1.0	aa nn ii mm yv nf
+아무튼	1.0	aa mm uu th xx nf
+아직도	1.0	aa c0 ii kf tt oo
+안개가	1.0	aa nf k0 qq k0 aa
+앉아서	1.0	aa nf c0 aa s0 vv
+않느냐	1.0	aa nf nn xx nn ya
+않는다	1.0	aa nf nn xx nf t0 aa
+않았다	1.0	aa nn aa tf tt aa
+않으면	1.0	aa nn xx mm yv nf
+앞에서	1.0	aa ph ee s0 vv
+액체가	1.0	qq kf ch ee k0 aa
+어디를	1.0	vv t0 ii rr xx ll
+어딘가	1.0	vv t0 ii nf k0 aa
+어질고	1.0	vv c0 ii ll k0 oo
+언제나	1.0	vv nf c0 ee nn aa
+얼굴을	1.0	vv ll k0 uu rr xx ll
+얼굴이	1.0	vv ll k0 uu rr ii
+없었다	1.0	vv pf ss vv tf tt aa
+여기서	1.0	yv k0 ii s0 vv
+여름은	1.0	yv rr xx mm xx nf
+연기가	1.0	yv nf k0 ii k0 aa
+연기를	1.0	yv nf k0 ii rr xx ll
+엿보고	1.0	yv tf pp oo k0 oo
+영감은	1.0	yv ng k0 aa mm xx nf
+영감이	1.0	yv ng k0 aa mm ii
+영화도	1.0	yv ng h0 wa t0 oo
+오늘은	1.0	oo nn xx rr xx nf
+오리의	1.0	oo rr ii xi
+올랐다	1.0	oo ll rr aa tf tt aa
+외순을	1.0	wo s0 uu nn xx ll
+우대로	1.0	uu t0 qq rr oo
+울기도	1.0	uu ll k0 ii t0 oo
+울음과	1.0	uu rr xx mf k0 wa
+움킨다	1.0	uu mf kh ii nf t0 aa
+원두막	1.0	wv nf t0 uu mm aa kf
+유난히	1.0	yu nn aa nf h0 ii
+의심도	1.0	xi s0 ii mf t0 oo
+이래서	1.0	ii rr qq s0 vv
+이르니	1.0	ii rr xx nn ii
+이름도	1.0	ii rr xx mf t0 oo
+이리로	1.0	ii rr ii rr oo
+이상한	1.0	ii s0 aa ng h0 aa nf
+이제는	1.0	ii c0 ee nn xx nf
+일어나	1.0	ii rr vv nn aa
+입술에	1.0	ii pf ss uu rr ee
+있다고	1.0	ii tf tt aa k0 oo
+있어야	1.0	ii ss vv ya
+있었다	1.0	ii ss vv tf tt aa
+자기도	1.0	c0 aa k0 ii t0 oo
+자꾸만	1.0	c0 aa kk uu mm aa nf
+잔디가	1.0	c0 aa nf t0 ii k0 aa
+잔디를	1.0	c0 aa nf t0 ii rr xx ll
+잔디에	1.0	c0 aa nf t0 ii ee
+잠그고	1.0	c0 aa mf k0 xx k0 oo
+잡목과	1.0	c0 aa mf mm oo kf kk wa
+잡자는	1.0	c0 aa pf cc aa nn xx nf
+전기도	1.0	c0 vv nf k0 ii t0 oo
+전부터	1.0	c0 vv nf p0 uu th vv
+젖먹이	1.0	c0 vv nf mm vv k0 ii
+제각기	1.0	c0 ee k0 aa kf kk ii
+조개지	1.0	c0 oo k0 qq c0 ii
+졸면서	1.0	c0 oo ll mm yv nf s0 vv
+좋겠다	1.0	c0 oo kh ee tf tt aa
+주기도	1.0	c0 uu k0 ii t0 oo
+주머니	1.0	c0 uu mm vv nn ii
+주었다	1.0	c0 uu vv tf tt aa
+주인에	1.0	c0 uu ii nn ee
+줬으면	1.0	c0 wv ss xx mm yv nf
+지치고	1.0	c0 ii ch ii k0 oo
+지폈다	1.0	c0 ii ph yv tf tt aa
+짐승도	1.0	c0 ii mf s0 xx ng t0 oo
+짐승이	1.0	c0 ii mf s0 xx ng ii
+찝찔한	1.0	cc ii pf cc ii ll h0 aa nf
+천천한	1.0	ch vv nf ch vv nf h0 aa nf
+천천히	1.0	ch vv nf ch vv nf h0 ii
+청량한	1.0	ch vv ng nn ya ng h0 aa nf
+체했다	1.0	ch ee h0 qq tf tt aa
+초가집	1.0	ch oo k0 aa c0 ii pf
+초시네	1.0	ch oo s0 ii nn ee
+코피를	1.0	kh oo ph ii rr xx ll
+콩밭과	1.0	kh oo ng p0 aa tf kk wa
+푸르름	1.0	ph uu rr xx rr xx mf
+하거나	1.0	h0 aa k0 vv nn aa
+하늘로	1.0	h0 aa nn xx ll rr oo
+하더니	1.0	h0 aa t0 vv nn ii
+햇살이	1.0	h0 qq tf ss aa rr ii
+했으나	1.0	h0 qq ss xx nn aa
+휘둘러	1.0	h0 wi t0 uu ll rr vv
+흔들어	1.0	h0 xx nf t0 xx rr vv
+희었다	1.0	h0 xi vv tf tt aa
+가는귀가	1.0	k0 aa nn xx nf k0 wi k0 aa
+가리켰다	1.0	k0 aa rr ii kh yv tf tt aa
+가을이면	1.0	k0 aa xx rr ii mm yv nf
+갈림길에	1.0	k0 aa ll rr ii mf k0 ii rr ee
+감다가도	1.0	k0 aa mf t0 aa k0 aa t0 oo
+개울가로	1.0	k0 qq uu ll k0 aa rr oo
+개울가에	1.0	k0 qq uu ll k0 aa ee
+개울둑에	1.0	k0 qq uu ll t0 uu k0 ee
+개울물을	1.0	k0 qq uu ll mm uu rr xx ll
+개울에다	1.0	k0 qq uu rr ee t0 aa
+건너간다	1.0	k0 vv nf nn vv k0 aa nf t0 aa
+건너오고	1.0	k0 vv nf nn vv oo k0 oo
+걷어올린	1.0	k0 vv t0 vv oo ll rr ii nf
+걸어가는	1.0	k0 vv rr vv k0 aa nn xx nf
+것이리라	1.0	k0 vv s0 ii rr ii rr aa
+것이었다	1.0	k0 vv s0 ii vv tf tt aa
+구석에는	1.0	k0 uu s0 vv k0 ee nn xx nf
+군데군데	1.0	k0 uu nf t0 ee k0 uu nf t0 ee
+굼실굼실	1.0	k0 uu mf s0 ii ll k0 uu mf s0 ii ll
+귀여웠다	1.0	k0 wi yv wv tf tt aa
+그러고도	1.0	k0 xx rr vv k0 oo t0 oo
+그러다가	1.0	k0 xx rr vv t0 aa k0 aa
+그런데도	1.0	k0 xx rr vv nf t0 ee t0 oo
+그리고는	1.0	k0 xx rr ii k0 oo nn xx nf
+그림자가	1.0	k0 xx rr ii mf c0 aa k0 aa
+기슭에서	1.0	k0 ii s0 xx k0 ee s0 vv
+기어가듯	1.0	k0 ii vv k0 aa t0 xx tf
+꺾어다가	1.0	kk vv kk vv t0 aa k0 aa
+나타나지	1.0	nn aa th aa nn aa c0 ii
+날아왔다	1.0	nn aa rr aa wa tf tt aa
+날일수록	1.0	nn aa rr ii ll s0 uu rr oo kf
+남천강이	1.0	nn aa mf ch vv nf k0 aa ng ii
+내려왔다	1.0	nn qq rr yv wa tf tt aa
+너구리가	1.0	nn vv k0 uu rr ii k0 aa
+너구리는	1.0	nn vv k0 uu rr ii nn xx nf
+넘어가면	1.0	nn vv mm vv k0 aa mm yv nf
+노인들이	1.0	nn oo ii nf t0 xx rr ii
+놀이터로	1.0	nn oo rr ii th vv rr oo
+눈망울은	1.0	nn uu nf mm aa ng uu rr xx nf
+뉘엿뉘엿	1.0	nn wi yv nf nn wi yv tf
+느티나무	1.0	nn xx th ii nn aa mm uu
+늘어지게	1.0	nn xx rr vv c0 ii k0 ee
+덩굴들이	1.0	t0 vv ng k0 uu ll t0 xx rr ii
+도래솔에	1.0	t0 oo rr qq s0 oo rr ee
+돋아나기	1.0	t0 oo t0 aa nn aa k0 ii
+돌래라는	1.0	t0 oo ll rr qq rr aa nn xx nf
+돌무더기	1.0	t0 oo ll mm uu t0 vv k0 ii
+돌아가고	1.0	t0 oo rr aa k0 aa k0 oo
+돌아서며	1.0	t0 oo rr aa s0 vv mm yv
+돌아섰다	1.0	t0 oo rr aa s0 vv tf tt aa
+돌아오는	1.0	t0 oo rr aa oo nn xx nf
+되기까지	1.0	t0 wo k0 ii kk aa c0 ii
+두렁에는	1.0	t0 uu rr vv ng ee nn xx nf
+둘레에는	1.0	t0 uu ll rr ee ee nn xx nf
+들어가는	1.0	t0 xx rr vv k0 aa nn xx nf
+들어섰다	1.0	t0 xx rr vv s0 vv tf tt aa
+디딤돌을	1.0	t0 ii t0 ii mf t0 oo rr xx ll
+떨구었다	1.0	tt vv ll k0 uu vv tf tt aa
+뜯기기를	1.0	tt xx tf kk ii k0 ii rr xx ll
+띄엄띄엄	1.0	tt xi vv mf tt xi vv mf
+라디오도	1.0	rr aa t0 ii oo t0 oo
+마주쳤다	1.0	mm aa c0 uu ch yv tf tt aa
+말타기도	1.0	mm aa ll th aa k0 ii t0 oo
+매끈했다	1.0	mm qq kk xx nf h0 qq tf tt aa
+먹었었다	1.0	mm vv k0 vv ss vv tf tt aa
+먹이기가	1.0	mm vv k0 ii k0 ii k0 aa
+메아리에	1.0	mm ee aa rr ii ee
+멧새집을	1.0	mm ee tf ss qq c0 ii p0 xx ll
+모내기가	1.0	mm oo nn qq k0 ii k0 aa
+모내기도	1.0	mm oo nn qq k0 ii t0 oo
+모르는지	1.0	mm oo rr xx nn xx nf c0 ii
+모양이다	1.0	mm oo ya ng ii t0 aa
+목덜미가	1.0	mm oo kf tt vv ll mm ii k0 aa
+몸뚱이를	1.0	mm oo mf tt uu ng ii rr xx ll
+못하기나	1.0	mm oo th aa k0 ii nn aa
+무논에는	1.0	mm uu nn oo nn ee nn xx nf
+무덤들이	1.0	mm uu t0 vv mf t0 xx rr ii
+물러났다	1.0	mm uu ll rr vv nn aa tf tt aa
+물장난을	1.0	mm uu ll cc aa ng nn aa nn xx ll
+바라보고	1.0	p0 aa rr aa p0 oo k0 oo
+바람끝이	1.0	p0 aa rr aa mf kk xx ch ii
+발돋움을	1.0	p0 aa ll t0 oo t0 uu mm xx ll
+밤밭골로	1.0	p0 aa mf p0 aa tf kk oo ll rr oo
+밤밭골은	1.0	p0 aa mf p0 aa tf kk oo rr xx nf
+버렸는지	1.0	p0 vv rr yv nf nn xx nf c0 ii
+보드랍고	1.0	p0 oo t0 xx rr aa pf kk oo
+불놀이를	1.0	p0 uu ll rr oo rr ii rr xx ll
+불렀는데	1.0	p0 uu ll rr vv nf nn xx nf t0 ee
+비단조개	1.0	p0 ii t0 aa nf c0 oo k0 qq
+비치었다	1.0	p0 ii ch ii vv tf tt aa
+비키기를	1.0	p0 ii kh ii k0 ii rr xx ll
+뻐꾸기는	1.0	pp vv kk uu k0 ii nn xx nf
+사잇길로	1.0	s0 aa ii tf kk ii ll rr oo
+새김질을	1.0	s0 qq k0 ii mf c0 ii rr xx ll
+새끼라도	1.0	s0 qq kk ii rr aa t0 oo
+새끼소는	1.0	s0 qq kk ii s0 oo nn xx nf
+새끼와는	1.0	s0 qq kk ii wa nn xx nf
+생각됐다	1.0	s0 qq ng k0 aa kf tt wq tf tt aa
+서울서는	1.0	s0 vv uu ll s0 vv nn xx nf
+서쪽으로	1.0	s0 vv cc oo k0 xx rr oo
+속눈썹의	1.0	s0 oo ng nn uu nf ss vv p0 xi
+손바닥에	1.0	s0 oo nf pp aa t0 aa k0 ee
+송아지가	1.0	s0 oo ng aa c0 ii k0 aa
+송아지는	1.0	s0 oo ng aa c0 ii nn xx nf
+송아지를	1.0	s0 oo ng aa c0 ii rr xx ll
+수수밭을	1.0	s0 uu s0 uu p0 aa th xx ll
+시작하고	1.0	s0 ii c0 aa kh aa k0 oo
+시작하면	1.0	s0 ii c0 aa kh aa mm yv nf
+시작했다	1.0	s0 ii c0 aa kh qq tf tt aa
+신명나는	1.0	s0 ii nf mm yv ng nn aa nn xx nf
+씨름에도	1.0	ss ii rr xx mm ee t0 oo
+아이들과	1.0	aa ii t0 xx ll k0 wa
+아이들은	1.0	aa ii t0 xx rr xx nf
+아이들의	1.0	aa ii t0 xx rr xi
+아이들이	1.0	aa ii t0 xx rr ii
+아찔했다	1.0	aa cc ii ll h0 qq tf tt aa
+안기기만	1.0	aa nf k0 ii k0 ii mm aa nf
+앞세우고	1.0	aa pf ss ee uu k0 oo
+약속이나	1.0	ya kf ss oo k0 ii nn aa
+양지쪽에	1.0	ya ng c0 ii cc oo k0 ee
+어디선가	1.0	vv t0 ii s0 vv nf k0 aa
+어미소가	1.0	vv mm ii s0 oo k0 aa
+어미소는	1.0	vv mm ii s0 oo nn xx nf
+어미소면	1.0	vv mm ii s0 oo mm yv nf
+어제처럼	1.0	vv c0 ee ch vv rr vv mf
+언덕이나	1.0	vv nf t0 vv k0 ii nn aa
+얼룩얼룩	1.0	vv ll rr uu k0 vv ll rr uu kf
+얽혔지만	1.0	vv ll kh yv tf cc ii mm aa nf
+여기에서	1.0	yv k0 ii ee s0 vv
+여기저기	1.0	yv k0 ii c0 vv k0 ii
+오솔길이	1.0	oo s0 oo ll k0 ii rr ii
+온종일을	1.0	oo nf c0 oo ng ii rr xx ll
+올라와서	1.0	oo ll rr aa wa s0 vv
+옹기종기	1.0	oo ng k0 ii c0 oo ng k0 ii
+왕개미를	1.0	wa ng k0 qq mm ii rr xx ll
+울어대고	1.0	uu rr vv t0 qq k0 oo
+움직였다	1.0	uu mf c0 ii k0 yv tf tt aa
+움츠리고	1.0	uu mf ch xx rr ii k0 oo
+움키었다	1.0	uu mf kh ii vv tf tt aa
+원두막이	1.0	wv nf t0 uu mm aa k0 ii
+윗도리를	1.0	wi tf tt oo rr ii rr xx ll
+유난히도	1.0	yu nn aa nf h0 ii t0 oo
+이번에는	1.0	ii p0 vv nn ee nn xx nf
+일어나고	1.0	ii rr vv nn aa k0 oo
+일어섰다	1.0	ii rr vv s0 vv tf tt aa
+일이었다	1.0	ii rr ii vv tf tt aa
+있노라면	1.0	ii nf nn oo rr aa mm yv nf
+있는지도	1.0	ii nf nn xx nf c0 ii t0 oo
+있었구나	1.0	ii ss vv tf kk uu nn aa
+자리잡는	1.0	c0 aa rr ii c0 aa mf nn xx nf
+잔디밭에	1.0	c0 aa nf t0 ii p0 aa th ee
+잡아다가	1.0	c0 aa p0 aa t0 aa k0 aa
+장기판도	1.0	c0 aa ng k0 ii ph aa nf t0 oo
+재미있는	1.0	c0 qq mm ii ii nf nn xx nf
+젖먹이를	1.0	c0 vv nf mm vv k0 ii rr xx ll
+제멋대로	1.0	c0 ee mm vv tf tt qq rr oo
+조약돌을	1.0	c0 oo ya kf tt oo rr xx ll
+조약돌이	1.0	c0 oo ya kf tt oo rr ii
+좋아했고	1.0	c0 oo aa h0 qq tf kk oo
+좋아했다	1.0	c0 oo aa h0 qq tf tt aa
+주머니에	1.0	c0 uu mm vv nn ii ee
+주무르는	1.0	c0 uu mm uu rr xx nn xx nf
+즐겁기만	1.0	c0 xx ll k0 vv pf kk ii mm aa nf
+지겹도록	1.0	c0 ii k0 yv pf tt oo rr oo kf
+지나가는	1.0	c0 ii nn aa k0 aa nn xx nf
+지났다고	1.0	c0 ii nn aa tf tt aa k0 oo
+지천으로	1.0	c0 ii ch vv nn xx rr oo
+진달래가	1.0	c0 ii nf t0 aa ll rr qq k0 aa
+징검다리	1.0	c0 ii ng k0 vv mf t0 aa rr ii
+짜릿하게	1.0	cc aa rr ii th aa k0 ee
+찌른다고	1.0	cc ii rr xx nf t0 aa k0 oo
+참외밭을	1.0	ch aa mm wo p0 aa th xx ll
+코피였다	1.0	kh oo ph ii yv tf tt aa
+팔짝팔짝	1.0	ph aa ll cc aa kf ph aa ll cc aa kf
+펑퍼짐한	1.0	ph vv ng ph vv c0 ii mf h0 aa nf
+푸우푸우	1.0	ph uu uu ph uu uu
+풍성하게	1.0	ph uu ng s0 vv ng h0 aa k0 ee
+학교에서	1.0	h0 aa kf kk yo ee s0 vv
+한가운데	1.0	h0 aa nf k0 aa uu nf t0 ee
+허전함이	1.0	h0 vv c0 vv nf h0 aa mm ii
+허탕이다	1.0	h0 vv th aa ng ii t0 aa
+헛디뎠다	1.0	h0 vv tf tt ii t0 yv tf tt aa
+현기증이	1.0	h0 yv nf k0 ii c0 xx ng ii
+호락호락	1.0	h0 oo rr aa kh oo rr aa kf
+휘어잡아	1.0	h0 wi vv c0 aa p0 aa
+흙바람이	1.0	h0 xx kf pp aa rr aa mm ii
+흡수지가	1.0	h0 xx pf ss uu c0 ii k0 aa
+흩어져서	1.0	h0 xx th vv c0 yv s0 vv
+가시내들은	1.0	k0 aa s0 ii nn qq t0 xx rr xx nf
+갈밭머리로	1.0	k0 aa ll pp aa nf mm vv rr ii rr oo
+강기슭으로	1.0	k0 aa ng k0 ii s0 xx k0 xx rr oo
+개울가에서	1.0	k0 qq uu ll k0 aa ee s0 vv
+개울둑이나	1.0	k0 qq uu ll t0 uu k0 ii nn aa
+거둬들이고	1.0	k0 vv t0 wv t0 xx rr ii k0 oo
+거칠어지고	1.0	k0 vv ch ii rr vv c0 ii k0 oo
+걸음이었다	1.0	k0 vv rr xx mm ii vv tf tt aa
+계속될수록	1.0	k0 ye s0 oo kf tt wo ll s0 uu rr oo kf
+구릉으로서	1.0	k0 uu rr xx ng xx rr oo s0 vv
+그늘에서는	1.0	k0 xx nn xx rr ee s0 vv nn xx nf
+기다리자는	1.0	k0 ii t0 aa rr ii c0 aa nn xx nf
+나타나리라	1.0	nn aa th aa nn aa rr ii rr aa
+나풀거리며	1.0	nn aa ph uu ll k0 vv rr ii mm yv
+낮잠이라도	1.0	nn aa tf cc aa mm ii rr aa t0 oo
+너구리굴이	1.0	nn vv k0 uu rr ii k0 uu rr ii
+논밭두렁에	1.0	nn oo nf p0 aa tf tt uu rr vv ng ee
+논밭두렁을	1.0	nn oo nf p0 aa tf tt uu rr vv ng xx ll
+다가오기도	1.0	t0 aa k0 aa oo k0 ii t0 oo
+다행이었다	1.0	t0 aa h0 qq ng ii vv tf tt aa
+단발머리를	1.0	t0 aa nf p0 aa ll mm vv rr ii rr xx ll
+두렁으로만	1.0	t0 uu rr vv ng xx rr oo mm aa nf
+뒤따라오는	1.0	t0 wi tt aa rr aa oo nn xx nf
+들불놀이를	1.0	t0 xx ll p0 uu ll rr oo rr ii rr xx ll
+들여다본다	1.0	t0 xx ll rr yv t0 aa p0 oo nf t0 aa
+등성이로는	1.0	t0 xx ng s0 vv ng ii rr oo nn xx nf
+때문이었다	1.0	tt qq mm uu nn ii vv tf tt aa
+마을이었다	1.0	mm aa xx rr ii vv tf tt aa
+먹구렁이가	1.0	mm vv kf kk uu rr vv ng ii k0 aa
+메밀밭이다	1.0	mm ee mm ii ll p0 aa ch ii t0 aa
+모여들었다	1.0	mm oo yv t0 xx rr vv tf tt aa
+바동거려도	1.0	p0 aa t0 oo ng k0 vv rr yv t0 oo
+바동거렸다	1.0	p0 aa t0 oo ng k0 vv rr yv tf tt aa
+반짝거렸다	1.0	p0 aa nf cc aa kf kk vv rr yv tf tt aa
+빨개지도록	1.0	pp aa ll k0 qq c0 ii t0 oo rr oo kf
+빨아들이듯	1.0	pp aa rr aa t0 xx rr ii t0 xx tf
+산골짜기에	1.0	s0 aa nf kk oo ll cc aa k0 ii ee
+소원이었다	1.0	s0 oo wv nn ii vv tf tt aa
+손바닥으로	1.0	s0 oo nf pp aa t0 aa k0 xx rr oo
+송아지만큼	1.0	s0 oo ng aa c0 ii mm aa nf kh xx mf
+스며드니까	1.0	s0 xx mm yv t0 xx nn ii kk aa
+아래편으로	1.0	aa rr qq ph yv nn xx rr oo
+아이들에게	1.0	aa ii t0 xx rr ee k0 ee
+아지랑이는	1.0	aa c0 ii rr aa ng ii nn xx nf
+않으면서도	1.0	aa nn xx mm yv nf s0 vv t0 oo
+어제까지는	1.0	vv c0 ee kk aa c0 ii nn xx nf
+얼굴이라도	1.0	vv ll k0 uu rr ii rr aa t0 oo
+영감이라고	1.0	yv ng k0 aa mm ii rr aa k0 oo
+울타리에는	1.0	uu ll th aa rr ii ee nn xx nf
+있을까마는	1.0	ii ss xx ll kk aa mm aa nn xx nf
+조심스럽게	1.0	c0 oo s0 ii mf s0 xx rr vv pf kk ee
+조용하기만	1.0	c0 oo yo ng h0 aa k0 ii mm aa nf
+증손녀라는	1.0	c0 xx ng s0 oo nf nn yv rr aa nn xx nf
+질색이었다	1.0	c0 ii ll ss qq k0 ii vv tf tt aa
+징검다리를	1.0	c0 ii ng k0 vv mf t0 aa rr ii rr xx ll
+청솔가지를	1.0	ch vv ng s0 oo ll k0 aa c0 ii rr xx ll
+푸르름으로	1.0	ph uu rr xx rr xx mm xx rr oo
+한가운데에	1.0	h0 aa nf k0 aa uu nf t0 ee ee
+한창이었다	1.0	h0 aa nf ch aa ng ii vv tf tt aa
+허리띠처럼	1.0	h0 vv rr ii tt ii ch vv rr vv mf
+혓바닥으로	1.0	h0 yv tf pp aa t0 aa k0 xx rr oo
+흘러들었다	1.0	h0 xx ll rr vv t0 xx rr vv tf tt aa
+갈꽃머리에서	1.0	k0 aa ll kk oo nf mm vv rr ii ee s0 vv
+갈밭머리에서	1.0	k0 aa ll pp aa nf mm vv rr ii ee s0 vv
+건너가더니만	1.0	k0 vv nf nn vv k0 aa t0 vv nn ii mm aa nf
+내려다보았다	1.0	nn qq rr yv t0 aa p0 oo aa tf tt aa
+너구리굴에다	1.0	nn vv k0 uu rr ii k0 uu rr ee t0 aa
+너구리보다도	1.0	nn vv k0 uu rr ii p0 oo t0 aa t0 oo
+넘겨다보면서	1.0	nn vv mf k0 yv t0 aa p0 oo mm yv nf s0 vv
+들불놀이라고	1.0	t0 xx ll p0 uu ll rr oo rr ii rr aa k0 oo
+들불놀이만큼	1.0	t0 xx ll p0 uu ll rr oo rr ii mm aa nf kh xx mf
+뛰쳐나가려고	1.0	tt wi ch yv nn aa k0 aa rr yv k0 oo
+물장난이었다	1.0	mm uu ll cc aa ng nn aa nn ii vv tf tt aa
+비단결보다도	1.0	p0 ii t0 aa nf k0 yv ll p0 oo t0 aa t0 oo
+아카시아꽃이	1.0	aa kh aa s0 ii aa kk oo ch ii
+어슬렁어슬렁	1.0	vv s0 xx ll rr vv ng vv s0 xx ll rr vv ng
+조약돌이었다	1.0	c0 oo ya kf tt oo rr ii vv tf tt aa
+토요일이었다	1.0	th oo yo ii rr ii vv tf tt aa
+훈훈해지니까	1.0	h0 uu nf h0 uu nf h0 qq c0 ii nn ii kk aa
+수수밭뿐이었다	1.0	s0 uu s0 uu p0 aa tf pp uu nn ii vv tf tt aa
+조무래기들에게	1.0	c0 oo mm uu rr qq k0 ii t0 xx rr ee k0 ee
+어린아이들에게도	1.0	vv rr ii nn aa ii t0 xx rr ee k0 ee t0 oo
