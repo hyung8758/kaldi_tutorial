@@ -52,6 +52,8 @@ echo "silence.txt file was generated."
 
 # nonsilence.
 awk '{$1=""; print $0}' $save/lexicon.txt | tr -s ' ' '\n' | sort -u | sed '/^$/d' >  $save/nonsilence_phones.txt
+sed '1d' $save/nonsilence_phones.txt > tmp_nons.txt
+mv tmp_nons.txt $save/nonsilence_phones.txt
 echo "nonsilence.txt file was generated."
 
 # optional_silence.
