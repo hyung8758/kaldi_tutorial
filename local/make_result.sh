@@ -41,11 +41,10 @@ exam_num=`echo $exam_list | wc -w`
 
 for skim in $exam_list; do
 
-	test_skim=`ls $data/$skim | grep "decode"`
-	if [ ${#test_skim} -ne 0 ]; then
+	decode_skim=`ls $data/$skim | grep "^decode$"`
 
-		train_box=`ls $data/$skim | grep "train" | head -1`
-		test_box=`ls $data/$skim | grep "test" | head -1`
+	if [ ${#decode_skim} -ne 0 ]; then
+
 		title_tmp=`echo $skim`
 		if [ "$title_tmp" == "mono" ]; then
 			title_name="MONOPHONE"
@@ -68,38 +67,21 @@ for skim in $exam_list; do
 		echo "$title_name" 																>> $save/$filename
 		echo "======================================================================" 	>> $save/$filename
 		echo 	 																		>> $save/$filename
-		if [ ${#train_box} -ne 0 ]; then
-			train_best=`cat $data/$skim/$train_box/scoring_kaldi/best_wer`
-			train_for=`echo $train_best | cut -c2- | awk -F']' '{print $1}'`
-			train_forward=`echo $train_for]`
-			train_backword=`echo $train_best | cut -c2- | awk -F']' '{print $2}' | cut -c2-`
-			if [ -z "$train_for" ]; then
-				train_forward="WER CANNOT BE DISPLAYED."
-				train_backword="ERROR MIGHT BE OCCURRED IN THE DECODING PROCESS."
+		if [ ${#decode_skim} -ne 0 ]; then
+			decode_best=`cat $data/$skim/decode/scoring_kaldi/best_wer`
+			decode_for=`echo $decode_best | cut -c2- | awk -F']' '{print $1}'`
+			decode_forward=`echo $decode_for]`
+			decode_backword=`echo $decode_best | cut -c2- | awk -F']' '{print $2}' | cut -c2-`
+			if [ -z "$decode_for" ]; then
+				decode_forward="WER CANNOT BE DISPLAYED."
+				decode_backword="ERROR MIGHT BE OCCURRED IN THE DECODING PROCESS."
 			fi
-			echo "TRAIN DATA" 															>> $save/$filename
-			echo "- BEST : $train_forward" 												>> $save/$filename
-			echo "       : $train_backword" 											>> $save/$filename
+			echo "DECODE" 																>> $save/$filename
+			echo "- BEST : $decode_forward" 											>> $save/$filename
+			echo "- PATH : $decode_backword" 											>> $save/$filename
 			echo 	 																	>> $save/$filename
 		else
-			echo "TRAIN DATA: DIRECTORY IS NOT FOUND." 									>> $save/$filename
-			echo 	 																	>> $save/$filename
-		fi
-		if [ ${#test_box} -ne 0 ]; then
-			test_best=`cat $data/$skim/$test_box/scoring_kaldi/best_wer`
-			test_for=`echo $test_best | cut -c2- | awk -F']' '{print $1}'`
-			test_forward=`echo $test_for]`
-			test_backword=`echo $test_best | cut -c2- | awk -F']' '{print $2}' | cut -c2-`
-			if [ -z "$test_for" ]; then
-				test_forward="WER CANNOT BE DISPLAYED."
-				test_backword="ERROR MIGHT BE OCCURRED IN THE DECODING PROCESS."
-			fi
-			echo "TEST DATA" 															>> $save/$filename
-			echo "- BEST : $test_forward" 												>> $save/$filename
-			echo "       : $test_backword" 												>> $save/$filename
-			echo 	 																	>> $save/$filename
-		else
-			echo "TEST DATA: DIRECTORY IS NOT FOUND." 									>> $save/$filename
+			echo "DECODE: DIRECTORY IS NOT FOUND." 										>> $save/$filename
 			echo 	 																	>> $save/$filename
 		fi
 		echo ====================================================================== 	>> $save/$filename
