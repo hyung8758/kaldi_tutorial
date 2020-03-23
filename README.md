@@ -8,7 +8,7 @@
 
 
 #### Tutorial
-- Tutorial is provided on [my blog](https://hyungwonsnotebook.blogspot.kr/)
+- Tutorial will be provided on [my blog](https://hyungwonsnotebook.blogspot.kr/) and youtube [channel](https://www.youtube.com/channel/UC91MOYGL0ZsAdJJHjj-WFCw)
 
 
 #### DEVELOPER
