@@ -30,4 +30,6 @@ if [[ $cmd_line -eq 0 ]] ; then
   echo "$0: Error: To install it, go to $KALDI_ROOT/tools" >&2
   echo "$0: Error: and run extras/install_irstlm.sh" >&2
   exit 1
-fi
+fi
+
+echo "code checked."
