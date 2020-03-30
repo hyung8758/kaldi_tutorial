@@ -1,4 +1,3 @@
-<UNK> 1.0 <UNK>
 가	1.0	k0 aa
 걸	1.0	k0 vv ll
 것	1.0	k0 vv tf

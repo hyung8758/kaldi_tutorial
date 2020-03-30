@@ -40,11 +40,8 @@ echo "Generating lexicon.txt and lexiconp.txt."
 echo "These files are pre-made. When you use other corpus, make them before training."
 # Get lexicon.txt and lexiconp.txt files.
 # These files are prepared for you. If you want to use other datasets you need to prepare them by yourself.
-cat local/lexicon.txt > $save/lexicon.txt
-cat local/lexiconp.txt > $save/lexiconp.txt
-
+cp local/lexicon.txt local/lexiconp.txt  $save
 echo "lexicon.txt and lexiconp.txt files were generated."
-
 
 # silence.
 echo -e "<SIL>\n<UNK>" >  $save/silence_phones.txt
@@ -52,9 +49,17 @@ echo "silence.txt file was generated."
 
 # nonsilence.
 awk '{$1=""; print $0}' $save/lexicon.txt | tr -s ' ' '\n' | sort -u | sed '/^$/d' >  $save/nonsilence_phones.txt
-sed '1d' $save/nonsilence_phones.txt > tmp_nons.txt
-mv tmp_nons.txt $save/nonsilence_phones.txt
+# sed '1d' $save/nonsilence_phones.txt > tmp_nons.txt
+# mv tmp_nons.txt $save/nonsilence_phones.txt
 echo "nonsilence.txt file was generated."
+
+# insert <UNK> to lexicon.
+sed -e '1i\
+<UNK> <UNK>\' $save/lexicon.txt > $save/tmp_lexicon.txt
+mv $save/tmp_lexicon.txt $save/lexicon.txt
+sed -e '1i\
+<UNK> 1.0 <UNK>\' $save/lexiconp.txt > $save/tmp_lexiconp.txt
+mv $save/tmp_lexiconp.txt $save/lexiconp.txt
 
 # optional_silence.
 echo '<SIL>' >  $save/optional_silence.txt

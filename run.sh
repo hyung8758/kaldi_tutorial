@@ -2,7 +2,7 @@
 # This script buils Korean ASR model based on kaldi toolkit.
 # 														Hyungwon Yang
 # 														hyung8758@gmail.com
-# 														NAMZ & EMCS Labs
+# 														NAMZ labs
 
 # This code trains and decodes the Korean readspeech corpus dataset with various training techniques.
 # Therefore, if anyone who would like to train their corpus dataset by running this sciprt, simply modify this script. 
@@ -15,7 +15,7 @@
 # Kaldi root: Where is your kaldi directory?
 kaldi=/home/kaldi
 # Source data: Where is your source (wavefile) data directory?
-source=/home/corpus/small_krs
+source=/path/to/the/krs/dataset
 # Log file: Log file will be saved with the name set below.
 logfile=1st_test
 log_dir=log
@@ -25,6 +25,8 @@ resultfile=result.txt
 ### Number of jobs.
 train_nj=2
 decode_nj=2
+# dnn number of jobs.
+dnn_train_nj=2 # if you wnat to run it by gpu then set it 1. otherwise kaldi will use cpu for dnn training.
 
 ### CMD
 train_cmd=utils/run.pl
@@ -32,7 +34,7 @@ decode_cmd=utils/run.pl
 
 ### Directories.
 train_dir=data/train
-test_dir=data/train
+test_dir=data/test
 lang_dir=data/lang
 dict_dir=data/local/dict
 log_dir=log
@@ -51,12 +53,12 @@ train_mono=1
 train_tri1=1
 train_tri2=1
 train_tri3=1
-train_dnn=0
+train_dnn=0 # this tutorial will skip this dnn training step, because the prepared data is not enough for dnn training.
 
 ### Decoding : Give 1 to activate the following steps. Give 0 to deactivate the following steps.
-decode_mono=0
-decode_tri1=0
-decode_tri2=0
+decode_mono=1
+decode_tri1=1
+decode_tri2=1
 decode_tri3=1
 decode_dnn=0
 
@@ -95,15 +97,16 @@ sgmmi_train_opt="--cmd $train_cmd --transform-dir exp/tri3_ali"
 sgmmi_decode_opt="--transform-dir exp/tri3/decode"
 
 # DNN
-dnn_function="train_tanh_fast.sh"
-dnn_train_opt=""
+# dnn_function="train_tanh_fast.sh"
+dnn_function="train_multisplice_accel2.sh"
+dnn_train_opt="--num-threads $dnn_train_nj"
 dnn_decode_opt="--nj $decode_nj --transform-dir exp/tri3/decode"
 
 
 # Start logging.
 mkdir -p $log_dir
 echo ====================================================================== | tee $log_dir/$logfile.log
-echo "                       Kaldi ASR Project	                		  " | tee -a $log_dir/$logfile.log
+echo "                       Kaldi ASR Project	                	  " | tee -a $log_dir/$logfile.log
 echo ====================================================================== | tee -a $log_dir/$logfile.log
 echo Tracking the training procedure on: `date` | tee -a $log_dir/$logfile.log
 echo KALDI_ROOT: $kaldi | tee -a $log_dir/$logfile.log
@@ -117,11 +120,11 @@ START=`date +%s`
 # Prepare data for training.
 if [ $prepare_data -eq 1 ]; then
 	echo ====================================================================== | tee -a $log_dir/$logfile.log
-	echo "                       Data Preparation	                		  " | tee -a $log_dir/$logfile.log 
+	echo "                       Data Preparation	             		  " | tee -a $log_dir/$logfile.log 
 	echo ====================================================================== | tee -a $log_dir/$logfile.log 
-	start1=`date +%s`; log_s1=`date | awk '{print $4}'`
-	echo $log_s1 >> $log_dir/$logfile.log 
-	echo START TIME: $log_s1 | tee -a $log_dir/$logfile.log 
+	start1=`date +%s`
+	echo `date` >> $log_dir/$logfile.log 
+	echo START TIME: `date` | tee -a $log_dir/$logfile.log 
 
 	# Check source file is ready to be used. Does train and test folders exist inside the source folder?
 	if [ ! -d $source/train -o ! -d $source/test ] ; then
@@ -139,20 +142,20 @@ if [ $prepare_data -eq 1 ]; then
 		utils/fix_data_dir.sh data/$set
 	done
 
-	end1=`date +%s`; log_e1=`date | awk '{print $4}'`
+	end1=`date +%s`
 	taken1=`local/track_time.sh $start1 $end1`
-	echo END TIME: $log_e1  | tee -a $log_dir/$logfile.log 
+	echo END TIME: `date`  | tee -a $log_dir/$logfile.log 
 	echo PROCESS TIME: $taken1 sec  | tee -a $log_dir/$logfile.log
 fi
 
 ### Language Model
 if [ $prepare_lm -eq 1 ]; then
 	echo ====================================================================== | tee -a $log_dir/$logfile.log 
-	echo "                       Language Modeling	                		  " | tee -a $log_dir/$logfile.log 
+	echo "                       Language Modeling	               		  " | tee -a $log_dir/$logfile.log 
 	echo ====================================================================== | tee -a $log_dir/$logfile.log 
-	start2=`date +%s`; log_s2=`date | awk '{print $4}'`
-	echo $log_s2 >> $log_dir/$logfile.log 
-	echo START TIME: $log_s2 | tee -a $log_dir/$logfile.log 
+	start2=`date +%s`
+	echo `date` >> $log_dir/$logfile.log 
+	echo START TIME: `date` | tee -a $log_dir/$logfile.log 
 
 	# Generate lexicon, lexiconp, silence, nonsilence, optional_silence, extra_questions
 	# from the train dataset.
@@ -162,7 +165,7 @@ if [ $prepare_lm -eq 1 ]; then
 		$dict_dir || exit 1
 
 	# Make ./data/lang folder and other files.
-	echo "Generating language models..." | tee -a $log_dir/$logfile.log 
+	echo "Generating lexicon models..." | tee -a $log_dir/$logfile.log 
 	utils/prepare_lang.sh \
 		$dict_dir \
 		"<UNK>" \
@@ -175,19 +178,20 @@ if [ $prepare_lm -eq 1 ]; then
 	else
 		nc=`find $KALDI_ROOT/tools/srilm/bin -name ngram-count`
 		# Make lm.arpa from textraw.
+		echo "Generating language models..." | tee -a $log_dir/$logfile.log
 		$nc -text $train_dir/textraw -lm $lang_dir/lm.arpa
 	fi
 
 	# Make G.fst from lm.arpa.
-	echo "Generating G.fst from lm.arpa..." | tee -a $log_dir/$logfile.log
+	echo "Converting lm.arpa to G.fst." | tee -a $log_dir/$logfile.log
 	cat $lang_dir/lm.arpa | $KALDI_ROOT/src/lmbin/arpa2fst --disambig-symbol=#0 --read-symbol-table=$lang_dir/words.txt - $lang_dir/G.fst
 	# Check .fst is stochastic or not.
 	$KALDI_ROOT/src/fstbin/fstisstochastic $lang_dir/G.fst
 
 
-	end2=`date +%s`; log_e2=`date | awk '{print $4}'`
+	end2=`date +%s`
 	taken2=`local/track_time.sh $start2 $end2`
-	echo END TIME: $log_e2  | tee -a $log_dir/$logfile.log 
+	echo END TIME: `date`  | tee -a $log_dir/$logfile.log 
 	echo PROCESS TIME: $taken2 sec  | tee -a $log_dir/$logfile.log
 fi
 
@@ -195,9 +199,9 @@ if [ $extract_train_mfcc -eq 1 ] || [ $extract_test_mfcc -eq 1 ] || [ $extract_t
 	echo ====================================================================== | tee -a $log_dir/$logfile.log 
 	echo "                   Acoustic Feature Extraction	             	  " | tee -a $log_dir/$logfile.log 
 	echo ====================================================================== | tee -a $log_dir/$logfile.log 
-	start3=`date +%s`; log_s3=`date | awk '{print $4}'`
-	echo $log_s3 >> $log_dir/$logfile.log 
-	echo START TIME: $log_s3 | tee -a $log_dir/$logfile.log 
+	start3=`date +%s`
+	echo `date` >> $log_dir/$logfile.log 
+	echo START TIME: `date` | tee -a $log_dir/$logfile.log 
 
 	### MFCC ###
 	if [ $extract_train_mfcc -eq 1 ] || [ $extract_test_mfcc -eq 1]; then
@@ -273,27 +277,25 @@ if [ $extract_train_mfcc -eq 1 ] || [ $extract_test_mfcc -eq 1 ] || [ $extract_t
 		 	$plpdir
 	fi
 
-
 	# data directories sanity check.
 	echo "Examining generated datasets..." | tee -a $log_dir/$logfile.log 
 	utils/validate_data_dir.sh $train_dir
 	utils/fix_data_dir.sh $train_dir
 
-
-	end3=`date +%s`; log_e3=`date | awk '{print $4}'`
+	end3=`date +%s`
 	taken3=`local/track_time.sh $start3 $end3`
-	echo END TIME: $log_e3  | tee -a $log_dir/$logfile.log 
+	echo END TIME: `date`  | tee -a $log_dir/$logfile.log 
 	echo PROCESS TIME: $taken3 sec  | tee -a $log_dir/$logfile.log
 
 fi
 
 if [ $train_mono -eq 1 ] || [ $decode_mono -eq 1 ]; then
 	echo ====================================================================== | tee -a $log_dir/$logfile.log 
-	echo "                    Train & Decode: Monophone	                 	  " | tee -a $log_dir/$logfile.log 
+	echo "                    Train & Decode: Monophone	                  " | tee -a $log_dir/$logfile.log 
 	echo ====================================================================== | tee -a $log_dir/$logfile.log 
-	start4=`date +%s`; log_s4=`date | awk '{print $4}'`
-	echo $log_s4 >> $log_dir/$logfile.log 
-	echo START TIME: $log_s4 | tee -a $log_dir/$logfile.log 
+	start4=`date +%s`
+	echo `date` >> $log_dir/$logfile.log 
+	echo START TIME: `date` | tee -a $log_dir/$logfile.log 
 
 	# Monophone train.
 	if [ $train_mono -eq 1 ]; then
@@ -349,9 +351,9 @@ if [ $train_mono -eq 1 ] || [ $decode_mono -eq 1 ]; then
 	# $KALDI_ROOT/src/bin/draw-tree $lang_dir/phones.txt exp/mono/tree \
 	# | dot -Tps -Gsize=8,10.5 | ps2pdf - tree.pdf 2>/dev/null
 
-	end4=`date +%s`; log_e4=`date | awk '{print $4}'`
+	end4=`date +%s`
 	taken4=`local/track_time.sh $start4 $end4`
-	echo END TIME: $log_e4  | tee -a $log_dir/$logfile.log 
+	echo END TIME: `date`  | tee -a $log_dir/$logfile.log 
 	echo PROCESS TIME: $taken4 sec  | tee -a $log_dir/$logfile.log
 fi
 
@@ -359,9 +361,9 @@ if [ $train_tri1 -eq 1 ] || [ $decode_tri1 -eq 1 ]; then
 	echo ====================================================================== | tee -a $log_dir/$logfile.log 
 	echo "           Train & Decode: Triphone1 [delta+delta-delta]	       	  " | tee -a $log_dir/$logfile.log 
 	echo ====================================================================== | tee -a $log_dir/$logfile.log 
-	start5=`date +%s`; log_s5=`date | awk '{print $4}'`
-	echo $log_s5 >> $log_dir/$logfile.log 
-	echo START TIME: $log_s5 | tee -a $log_dir/$logfile.log 
+	start5=`date +%s`
+	echo `date` >> $log_dir/$logfile.log 
+	echo START TIME: `date` | tee -a $log_dir/$logfile.log 
 
 	# Triphone1 training.
 	if [ $train_tri1 -eq 1 ]; then
@@ -406,19 +408,19 @@ if [ $train_tri1 -eq 1 ] || [ $decode_tri1 -eq 1 ]; then
 			exp/tri1/decode
 	fi
 
-	end5=`date +%s`; log_e5=`date | awk '{print $4}'`
+	end5=`date +%s`
 	taken5=`local/track_time.sh $start5 $end5`
-	echo END TIME: $log_e5  | tee -a $log_dir/$logfile.log 
+	echo END TIME: `date`  | tee -a $log_dir/$logfile.log 
 	echo PROCESS TIME: $taken5 sec  | tee -a $log_dir/$logfile.log
 fi
 
 if [ $train_tri2 -eq 1 ] || [ $decode_tri2 -eq 1 ]; then
 	echo ====================================================================== | tee -a $log_dir/$logfile.log 
-	echo "               Train & Decode: Triphone2 [LDA+MLLT]	         	  " | tee -a $log_dir/$logfile.log 
+	echo "               Train & Decode: Triphone2 [LDA+MLLT]              	  " | tee -a $log_dir/$logfile.log 
 	echo ====================================================================== | tee -a $log_dir/$logfile.log 
-	start6=`date +%s`; log_s6=`date | awk '{print $4}'`
-	echo $log_s6 >> $log_dir/$logfile.log 
-	echo START TIME: $log_s6 | tee -a $log_dir/$logfile.log 
+	start6=`date +%s`
+	echo `date` >> $log_dir/$logfile.log 
+	echo START TIME: `date` | tee -a $log_dir/$logfile.log 
 
 
 	# Triphone2 training.
@@ -463,19 +465,19 @@ if [ $train_tri2 -eq 1 ] || [ $decode_tri2 -eq 1 ]; then
 			exp/tri2/decode
 	fi
 
-	end6=`date +%s`; log_e6=`date | awk '{print $4}'`
+	end6=`date +%s`
 	taken6=`local/track_time.sh $start6 $end6`
-	echo END TIME: $log_e6  | tee -a $log_dir/$logfile.log 
+	echo END TIME: `date`  | tee -a $log_dir/$logfile.log 
 	echo PROCESS TIME: $taken6 sec  | tee -a $log_dir/$logfile.log
 fi
 
 if [ $train_tri3 -eq 1 ] || [ $decode_tri3 -eq 1 ]; then
 	echo ====================================================================== | tee -a $log_dir/$logfile.log 
-	echo "             Train & Decode: Triphone3 [LDA+MLLT+SAT]	         	  " | tee -a $log_dir/$logfile.log 
+	echo "             Train & Decode: Triphone3 [LDA+MLLT+SAT]	          " | tee -a $log_dir/$logfile.log 
 	echo ====================================================================== | tee -a $log_dir/$logfile.log 
-	start7=`date +%s`; log_s7=`date | awk '{print $4}'`
-	echo $log_s7 >> $log_dir/$logfile.log 
-	echo START TIME: $log_s7 | tee -a $log_dir/$logfile.log 
+	start7=`date +%s`
+	echo `date` >> $log_dir/$logfile.log 
+	echo START TIME: `date` | tee -a $log_dir/$logfile.log 
 
 
 	# Triphone3 training.
@@ -520,25 +522,25 @@ if [ $train_tri3 -eq 1 ] || [ $decode_tri3 -eq 1 ]; then
 			exp/tri3/decode
 	fi
 
-	end7=`date +%s`; log_e7=`date | awk '{print $4}'`
+	end7=`date +%s`
 	taken7=`local/track_time.sh $start7 $end7`
-	echo END TIME: $log_e7  | tee -a $log_dir/$logfile.log 
+	echo END TIME: `date`  | tee -a $log_dir/$logfile.log 
 	echo PROCESS TIME: $taken7 sec  | tee -a $log_dir/$logfile.log
 fi
 
 ### DNN training
 if [ $train_dnn -eq 1 ] || [ $decode_dnn -eq 1 ]; then
 	echo ====================================================================== | tee -a $log_dir/$logfile.log 
-	echo "                       Train & Decode: DNN  	            	      " | tee -a $log_dir/$logfile.log 
+	echo "                       Train & Decode: DNN  	                  " | tee -a $log_dir/$logfile.log 
 	echo ====================================================================== | tee -a $log_dir/$logfile.log 
-	start10=`date +%s`; log_s10=`date | awk '{print $4}'`
-	echo $log_s10 >> $log_dir/$logfile.log 
-	echo START TIME: $log_s10 | tee -a $log_dir/$logfile.log 
+	start10=`date +%s`
+	echo `date` >> $log_dir/$logfile.log 
+	echo START TIME: `date` | tee -a $log_dir/$logfile.log 
 
 	# DNN training.
 	if [ $train_dnn -eq 1 ]; then
 		# train_tanh_fast.sh
-		echo "DNN($dnn_function) trainig options: $dnn_train_opt"					| tee -a $log_dir/$logfile.log
+		echo "DNN($dnn_function) trainig options: $dnn_train_opt"       | tee -a $log_dir/$logfile.log
 		echo "Training DNN..." | tee -a $log_dir/$logfile.log
 		steps/nnet2/$dnn_function \
 			$dnn_train_opt \
@@ -560,9 +562,9 @@ if [ $train_dnn -eq 1 ] || [ $decode_dnn -eq 1 ]; then
 			exp/tri4/decode
 	fi
 
-	end10=`date +%s`; log_e10=`date | awk '{print $4}'`
+	end10=`date +%s`
 	taken10=`local/track_time.sh $start10 $end10`
-	echo END TIME: $log_e10  | tee -a $log_dir/$logfile.log 
+	echo END TIME: `date`  | tee -a $log_dir/$logfile.log 
 	echo PROCESS TIME: $taken10 sec  | tee -a $log_dir/$logfile.log
 
 
@@ -570,7 +572,7 @@ fi
 
 if [ $display_result -eq 1 ]; then 
 	echo ====================================================================== | tee -a $log_dir/$logfile.log 
-	echo "                             RESULTS  	                	      " | tee -a $log_dir/$logfile.log 
+	echo "                             RESULTS                      	  " | tee -a $log_dir/$logfile.log 
 	echo ====================================================================== | tee -a $log_dir/$logfile.log 
 	echo "Displaying results" | tee -a $log_dir/$logfile.log
 

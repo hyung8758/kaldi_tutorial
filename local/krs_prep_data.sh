@@ -173,7 +173,7 @@ echo "wav.scp file was generated."
 
 # segments
 # In korean Readspeech corpus, each audio file contains only one sentence. Therefore, segement information is not needed. 
-# However, this script will generate segements file.
+# However, this script will generate segements file on educationaly purpose.
 if [ -f $save/segments ] && [ ! -z $save/segments ]; then
 	echo '' > $save/segments
 	echo '* Previous segments file was removed.'
