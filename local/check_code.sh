@@ -22,8 +22,8 @@ fi
 
 # SRILM check
 SRILM=$KALDI_ROOT/tools/srilm/bin
-cmd_line=`find $SRILM -name ngram-count`
-if [[ $cmd_line -eq 0 ]] ; then
+cmd_line=`find $SRILM -name ngram-count | wc -l`
+if [[ $cmd_line -ne 1 ]] ; then
   echo "$0: Error: the IRSTLM is not available or compiled" >&2
   echo "$0: Error: We used to install it by default, but." >&2
   echo "$0: Error: this is no longer the case." >&2
