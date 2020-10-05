@@ -18,7 +18,6 @@ kaldi=/home/kaldi
 source=/path/to/the/krs/dataset
 # Log file: Log file will be saved with the name set below.
 logfile=1st_test
-log_dir=log
 # Result file name
 resultfile=result.txt
 
@@ -138,7 +137,7 @@ if [ $prepare_data -eq 1 ]; then
 			$source/$set \
 			data/$set || exit 1
 
-		utils/validate_data_dir.sh data/$set
+		utils/validate_data_dir.sh --no-feats data/$set
 		utils/fix_data_dir.sh data/$set
 	done
 
@@ -161,7 +160,7 @@ if [ $prepare_lm -eq 1 ]; then
 	# from the train dataset.
 	echo "Generating dictionary related files..." | tee -a $log_dir/$logfile.log 
 	local/krs_prep_dict.sh \
-		$source/train \
+		$train_dir \
 		$dict_dir || exit 1
 
 	# Make ./data/lang folder and other files.
@@ -170,11 +169,11 @@ if [ $prepare_lm -eq 1 ]; then
 		$dict_dir \
 		"<UNK>" \
 		$lang_dir/local/lang \
-		$lang_dir
+		$lang_dir || exit 1
 
 	# Set ngram-count folder.
 	if [[ -z $(find $KALDI_ROOT/tools/srilm/bin -name ngram-count) ]]; then
-		echo "SRILM might not be installed on your computer. Please find kaldi/tools/install_srilm.sh and install the package." #&& exit 1
+		echo "SRILM might not be installed on your computer. Please find kaldi/tools/install_srilm.sh and install the package." && exit 1
 	else
 		nc=`find $KALDI_ROOT/tools/srilm/bin -name ngram-count`
 		# Make lm.arpa from textraw.
@@ -185,7 +184,7 @@ if [ $prepare_lm -eq 1 ]; then
 	# Make G.fst from lm.arpa.
 	echo "Converting lm.arpa to G.fst." | tee -a $log_dir/$logfile.log
 	cat $lang_dir/lm.arpa | $KALDI_ROOT/src/lmbin/arpa2fst --disambig-symbol=#0 --read-symbol-table=$lang_dir/words.txt - $lang_dir/G.fst
-	# Check .fst is stochastic or not.
+	# Check fst is stochastic or not.
 	$KALDI_ROOT/src/fstbin/fstisstochastic $lang_dir/G.fst
 
 
@@ -217,13 +216,13 @@ if [ $extract_train_mfcc -eq 1 ] || [ $extract_test_mfcc -eq 1 ] || [ $extract_t
 			--nj $train_nj \
 		 	$train_dir \
 		 	exp/make_mfcc/train \
-		 	$mfccdir
+		 	$mfccdir || exit 1
 		# Compute cmvn. (This steps should be processed right after mfcc features are extracted.)
 		echo "Computing CMVN on train data MFCC..." | tee -a $log_dir/$logfile.log 
 		steps/compute_cmvn_stats.sh \
 		 	$train_dir \
 		 	exp/make_mfcc/train \
-		 	$mfccdir
+		 	$mfccdir || exit 1
 	fi
 	if [ $extract_test_mfcc -eq 1 ]; then
 		echo "Extracting test data MFCC features..." | tee -a $log_dir/$logfile.log
@@ -231,13 +230,13 @@ if [ $extract_train_mfcc -eq 1 ] || [ $extract_test_mfcc -eq 1 ] || [ $extract_t
 		    --nj $train_nj \
 		 	$test_dir \
 		 	exp/make_mfcc/test \
-		 	$mfccdir
+		 	$mfccdir || exit 1
 		# Compute cmvn. (This steps should be processed right after mfcc features are extracted.)
 		echo "Computing CMVN on test data MFCC..." | tee -a $log_dir/$logfile.log 
 		steps/compute_cmvn_stats.sh \
 		 	$test_dir \
 		 	exp/make_mfcc/test \
-		 	$mfccdir
+		 	$mfccdir || exit 1
 	fi
 
 	### PLP ###
@@ -253,13 +252,13 @@ if [ $extract_train_mfcc -eq 1 ] || [ $extract_test_mfcc -eq 1 ] || [ $extract_t
 	 	    --nj $train_nj \
 			$train_dir \
 			exp/make_plp/train \
-			$plpdir
+			$plpdir || exit 1
 		# Compute cmvn. (This steps should be processed right after plp features are extracted.)
 		echo "Computing CMVN on train data PLP..." | tee -a $log_dir/$logfile.log 
 		steps/compute_cmvn_stats.sh \
 		 	$train_dir \
 		 	exp/make_plp/train \
-		 	$plpdir
+		 	$plpdir || exit 1
 	fi
 	if [ $extract_test_plp -eq 1 ]; then
 		# plp feature extraction.
@@ -268,13 +267,13 @@ if [ $extract_train_mfcc -eq 1 ] || [ $extract_test_mfcc -eq 1 ] || [ $extract_t
 	 	    --nj $train_nj \
 			$test_dir \
 			exp/make_plp/test \
-			$plpdir
+			$plpdir || exit 1
 		# Compute cmvn. (This steps should be processed right after plp features are extracted.)
 		echo "Computing CMVN on test data PLP..." | tee -a $log_dir/$logfile.log 
 		steps/compute_cmvn_stats.sh \
 		 	$test_dir \
 		 	exp/make_plp/test \
-		 	$plpdir
+		 	$plpdir || exit 1
 	fi
 
 	# data directories sanity check.
@@ -334,7 +333,7 @@ if [ $train_mono -eq 1 ] || [ $decode_mono -eq 1 ]; then
 		utils/mkgraph.sh \
 		$lang_dir \
 		exp/mono \
-		exp/mono/graph 
+		exp/mono/graph  || exit 1
 
 		# Data decoding.
 		echo "Monophone decoding options: $mono_decode_opt" | tee -a $log_dir/$logfile.log
@@ -343,7 +342,7 @@ if [ $train_mono -eq 1 ] || [ $decode_mono -eq 1 ]; then
 			$mono_decode_opt \
 			exp/mono/graph \
 			$test_dir \
-			exp/mono/decode
+			exp/mono/decode || exit 1
 	fi
 
 	### Optional ###
@@ -396,7 +395,7 @@ if [ $train_tri1 -eq 1 ] || [ $decode_tri1 -eq 1 ]; then
 		utils/mkgraph.sh \
 			$lang_dir \
 			exp/tri1 \
-			exp/tri1/graph
+			exp/tri1/graph || exit 1
 
 		# Data decoding.
 		echo "Triphone1 decoding options: $tri1_decode_opt"	| tee -a $log_dir/$logfile.log
@@ -405,7 +404,7 @@ if [ $train_tri1 -eq 1 ] || [ $decode_tri1 -eq 1 ]; then
 			$tri1_decode_opt \
 			exp/tri1/graph \
 			$test_dir \
-			exp/tri1/decode
+			exp/tri1/decode || exit 1
 	fi
 
 	end5=`date +%s`
@@ -453,7 +452,7 @@ if [ $train_tri2 -eq 1 ] || [ $decode_tri2 -eq 1 ]; then
 		utils/mkgraph.sh \
 			$lang_dir \
 			exp/tri2 \
-			exp/tri2/graph
+			exp/tri2/graph || exit 1
 
 		# Data decoding.
 		echo "Triphone2 decoding options: $tri2_decode_opt"	| tee -a $log_dir/$logfile.log
@@ -462,7 +461,7 @@ if [ $train_tri2 -eq 1 ] || [ $decode_tri2 -eq 1 ]; then
 			$tri2_decode_opt \
 			exp/tri2/graph \
 			$test_dir \
-			exp/tri2/decode
+			exp/tri2/decode || exit 1
 	fi
 
 	end6=`date +%s`
@@ -510,7 +509,7 @@ if [ $train_tri3 -eq 1 ] || [ $decode_tri3 -eq 1 ]; then
 		utils/mkgraph.sh \
 			$lang_dir \
 			exp/tri3 \
-			exp/tri3/graph
+			exp/tri3/graph || exit 1
 
 		# Data decoding: train and test datasets.
 		echo "Tirphone3 decoding options: $tri3_decode_opt" | tee -a $log_dir/$logfile.log
@@ -519,7 +518,7 @@ if [ $train_tri3 -eq 1 ] || [ $decode_tri3 -eq 1 ]; then
 			$tri3_decode_opt \
 			exp/tri3/graph \
 			$test_dir \
-			exp/tri3/decode
+			exp/tri3/decode || exit 1
 	fi
 
 	end7=`date +%s`
@@ -559,7 +558,7 @@ if [ $train_dnn -eq 1 ] || [ $decode_dnn -eq 1 ]; then
 			$dnn_decode_opt \
 			exp/tri3/graph \
 			$test_dir \
-			exp/tri4/decode
+			exp/tri4/decode || exit 1
 	fi
 
 	end10=`date +%s`
@@ -578,7 +577,7 @@ if [ $display_result -eq 1 ]; then
 
 	# Save result in the log folder.
 	echo "Displaying results" | tee -a $log_dir/$logfile.log
-	local/make_result.sh exp log $resultfile
+	local/make_result.sh exp log $resultfile  || exit 1
 	echo "Reporting results..." | tee -a $log_dir/$logfile.log
 	cat log/$resultfile | tee -a $log_dir/$logfile.log
 fi
@@ -588,4 +587,3 @@ echo "Training procedure finished successfully..." | tee -a $log_dir/$logfile.lo
 END=`date +%s`
 taken=`. local/track_time.sh $START $END`
 echo TOTAL TIME: $taken sec  | tee -a $log_dir/$logfile.log 
-
