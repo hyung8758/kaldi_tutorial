@@ -9,8 +9,8 @@
 
 ### How to run
 - OS
-    - Mac OS Catalina version 10.15.3
-    - Ubuntu version 6.04 and 18.04
+    - Mac OS Catalina version 10.15.6
+    - Ubuntu version 16.04 and 18.04
 - requirments
     - kaldi
     - GNU sed
