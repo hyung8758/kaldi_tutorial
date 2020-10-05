@@ -1,0 +1,9 @@
+.DS_Store
+*~
+nohup.out
+bin/
+conf/
+data/
+exp/
+log/
+mfcc/
