@@ -266,7 +266,7 @@ if [ $stage -le -2 ]; then
   initial_lrate=$(perl -e "print ($initial_effective_lrate*$num_jobs_initial);")
 
   # create the config files for nnet initialization
-  python steps/nnet2/make_multisplice_configs.py  \
+  python2 steps/nnet2/make_multisplice_configs.py  \
     --splice-indexes "$splice_indexes"  \
     --total-input-dim $tot_input_dim  \
     --ivector-dim $ivector_dim  \
