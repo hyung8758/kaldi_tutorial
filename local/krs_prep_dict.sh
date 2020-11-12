@@ -25,7 +25,7 @@ echo "                              NOTICE                                "
 echo ""
 echo -e "krs_prep_dict: Generate lexicon, silence, nonsilence, \n\toptional_silence, and extra_questions."
 echo "CURRENT SHELL: $0"
-echo -e "INPUT ARGUMENTS:\n$@"
+echo -e "INPUT ARGUMENTS: $@"
 
 for check in lexicon.txt silence.txt nonsilence.txt optional_silence.txt extra_questions.txt; do
 	if [ -f $save/$check ] && [ ! -z $save/$check ]; then
