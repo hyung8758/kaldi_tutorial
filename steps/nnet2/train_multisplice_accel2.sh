@@ -194,7 +194,7 @@ cp $alidir/tree $dir
 # process the splice_inds string, to get a layer-wise context string
 # to be processed by the nnet-components
 # this would be mainly used by SpliceComponent|SpliceMaxComponent
-python steps/nnet2/make_multisplice_configs.py contexts --splice-indexes "$splice_indexes" $dir || exit -1;
+python2 steps/nnet2/make_multisplice_configs.py contexts --splice-indexes "$splice_indexes" $dir || exit -1;
 context_string=$(cat $dir/vars) || exit -1
 echo $context_string
 eval $context_string || exit -1; #
